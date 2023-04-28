@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import ButtonSwitchTheme from "../../components/ButtonSwitchTheme/ButtonSwitchTheme";
 import Col from "../../components/Col";
-import Row from "../../components/Row";
 import { AuthContext } from "../../context/AuthContext";
 import {
     ButtonLogin,
+    Credential,
     Form,
     FormGroup,
     Input,
@@ -46,14 +46,20 @@ const Login = () => {
             <ButtonSwitchTheme />
             <LoginWrapper>
                 <Col>
-                    <Row margin={"40px 0"}>
-                        <Title>Olá, faça login em sua conta.</Title>
-                    </Row>
+                    <Col margin={"40px 0"}>
+                        <Title>Olá, faça login com as credenciais</Title>
+                        <Credential style={{ margin: "10px 0 10px" }}>
+                            <b>email:</b> eve.holt@reqres.in
+                        </Credential>
+                        <Credential>
+                            <b>senha:</b> cityslicka
+                        </Credential>
+                    </Col>
                     <Form onSubmit={handleSubmit(onSubmit)}>
                         <FormGroup>
                             <Label>E-mail</Label>
                             <Input
-                                type="email"
+                                type="name"
                                 {...register("email")}
                                 placeholder="Digite seu email"
                                 autoComplete="off"
