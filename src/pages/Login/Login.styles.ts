@@ -15,6 +15,10 @@ export const Title = styled.h1`
     color: ${({ theme }) => theme.colors.textPrimary};
 `;
 
+export const Credential = styled.p`
+    color: ${({ theme }) => theme.colors.textPrimary};
+`;
+
 export const Input = styled.input`
     font-size: 14px;
     color: ${({ theme }) => theme.colors.textPrimary};
